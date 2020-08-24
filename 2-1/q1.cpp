@@ -1,13 +1,36 @@
-﻿// 1-4.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
+﻿// 2-1.cpp : 이 파일에는 'main' 함수가 포함됩니다. 거기서 프로그램 실행이 시작되고 종료됩니다.
+//참조자를 이용해서 함수 구현
+
+#include <iostream>
+using std::cout;
+using std::endl;
 
 
-#include "NameSp2.h"
-    
+void IncreaseByOne(int& a)
+{
+    a++;
+    return;
+}
+
+void ChangeSign(int& a)
+{
+    a = -a;
+    return;
+}
+
 int main()
 {
-    BestComImpl::SimpleFunc();
-    ProgComImpl::SimpleFunc();
+    int num = 10;
+    cout << num << endl;
+
+    IncreaseByOne(num);
+    cout << num << endl;
+
+    ChangeSign(num);
+    cout << num << endl;
+
     return 0;
+
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
