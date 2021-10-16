@@ -2,47 +2,53 @@
 
 using namespace std;
 
-class First{
-    public:
+class First
+{
+public:
     void first()
     {
-        cout<<"First()"<<endl;
+        cout << "First()" << endl;
     }
 
-    virtual void myFunc(){
-        cout<<"firstFunc()"<<endl;
+    virtual void myFunc()
+    {
+        cout << "firstFunc()" << endl;
     }
 };
 
-class Second: public First{
-    public:
+class Second : public First
+{
+public:
     void second()
     {
-        cout<<"Second()"<<endl;
+        cout << "Second()" << endl;
     }
 
-    virtual void myFunc(){
-        cout<<"secondFunc()"<<endl;
+    virtual void myFunc()
+    {
+        cout << "secondFunc()" << endl;
     }
 };
 
-class Third: public Second{
-    public:
+class Third : public Second
+{
+public:
     void third()
     {
-        cout<<"Third()"<<endl;
+        cout << "Third()" << endl;
     }
 
-    virtual void myFunc(){
-        cout<<"thirdFunc()"<<endl;
+    virtual void myFunc()
+    {
+        cout << "thirdFunc()" << endl;
     }
 };
 
 int main()
 {
     Third obj;
-    Second & sref= obj;
-    Second* sptr = &obj;
+    Second &sref = obj;
+    Second *sptr = &obj;
     sptr->myFunc();
     //sptr->third();
     // sref.third();
